@@ -1,9 +1,10 @@
 import express from 'express';
-import { createData, deleteData, getAllData, updateData } from '../controllers/testControllers.js';
+import { createData, deleteData, getAllData, updateData ,getDataById } from '../controllers/testControllers.js';
 
 const router = express.Router();
 
 router.get('/', getAllData);
+router.get('/:id', getDataById);
 router.post('/', createData);
 router.put('/:id', updateData);
 router.delete('/:id', deleteData);
