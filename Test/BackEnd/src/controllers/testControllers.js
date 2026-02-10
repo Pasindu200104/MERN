@@ -23,8 +23,8 @@ export async function getDataById(req, res){
 
 export async function createData(req, res) {
   try {
-    const {title,body} = req.body;
-    const newData = new data({title,body});
+    const {title,content} = req.body;
+    const newData = new data({title,content});
     const savedata = await newData.save();
     res.status(201).json(savedata);
   } catch (error) {
