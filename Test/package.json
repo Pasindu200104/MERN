@@ -1,1 +1,13 @@
-{}
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "builds": "npm install --prefix BackEnd && npm install --prefix FrontEnd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
