@@ -12,9 +12,9 @@ export async function getAllData(req, res) {
 
 export async function getDataById(req, res){
   try {
-    const data = await data.findById(req.params.id);
-    if(!data) return res.status(404).json({message: "Data not found"});
-    res.status(200).json(data);
+    const foundData = await data.findById(req.params.id);
+    if(!foundData) return res.status(404).json({message: "Data not found"});
+    res.status(200).json(foundData);
   } catch (error) {
     console.error("Error fetching data by ID:", error);
     res.status(500).json({ message: "Server Error" });
@@ -40,7 +40,7 @@ export async function updateData(req, res) {
 
     if (!updatedData) return res.status(404).json({ message: "Data not found" });
 
-    res.status(200).json(updateData);
+    res.status(200).json(updatedData);
 
   } catch (error) {
     console.error("Error updating data:", error);
